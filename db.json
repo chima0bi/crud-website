@@ -1,0 +1,34 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Chims",
+      "place": "Japan",
+      "phone": "07047966730"
+    },
+    {
+      "id": "2",
+      "name": "Tony",
+      "place": "Seychelles",
+      "phone": "08169014997"
+    },
+    {
+      "id": "3",
+      "name": "Diogor",
+      "place": "Maldives",
+      "phone": "08063722208"
+    },
+    {
+      "id": "10",
+      "name": "Constantine",
+      "place": "Madrid",
+      "phone": "08102340899"
+    },
+    {
+      "id": "-2",
+      "name": "tyuuijh",
+      "place": "ghtgh",
+      "phone": "756uy"
+    }
+  ]
+}

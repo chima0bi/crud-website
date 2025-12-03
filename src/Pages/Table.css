@@ -1,0 +1,141 @@
+.table-container {
+  border-radius: 1rem;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.36);
+  max-width: 1000px;
+  padding: 2rem;
+  margin: 3rem auto;
+  margin-top: 20px;
+  border-top: #0077cc 3px solid;
+  background-color: rgb(192, 234, 192);
+}
+
+.table-container h2 {
+  text-align: center;
+  color: #0077cc;
+  font-size: 1.8rem;
+  margin-bottom: 1.2rem;
+}
+
+.add-btn {
+  display: inline-block;
+  font-size: 16px;
+  text-decoration: none;
+  padding: 0.6rem 0.6rem;
+  border-radius: 8px;
+  border: #0665a9 2px solid;
+  background-color: #0665a9;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+}
+
+.add-btn:hover {
+  background-color: #1070b4;
+  border: #1070b4 2px solid;
+  transform: translateY(1px);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.table tbody tr:hover {
+  background-color: #f1f9ff;
+  transition: background-color 0.3s ease;
+}
+
+.table th {
+  background-color: #07c;
+  padding: 12px;
+  text-align: center;
+  color: white;
+}
+
+.table th,
+.table td {
+  padding: 0.9rem, 1rem;
+  border-bottom: 2px solid #e5e7eb;
+  /* padding: 4px; */
+  /* text-align: left; */
+}
+
+.table td {
+  text-align: center;
+}
+
+.table td:nth-child(5) {
+  align-items: left;
+  justify-content: left;
+  background-color: #568f6b;
+  border: none;
+}
+
+.table thead {
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  /* font-size: 0.9rem; */
+}
+
+.table button,
+.table a {
+  display: inline-block;
+  margin-right: 0.4rem;
+  padding: 0.45rem 0.9rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  color: black;
+  border: 1px solid black;
+  text-decoration: none;
+}
+
+.view {
+  background-color: #16a34a;
+}
+
+.view:hover {
+  background-color: #15803d;
+}
+
+.edit {
+  background-color: #cab308;
+  color: #333;
+}
+
+.edit:hover {
+  background-color: #ca8a03;
+  color: white;
+}
+
+.delete {
+  background-color: #dc2535;
+}
+
+.delete:hover {
+  background-color: #dc2838;
+}
+
+@media (max-width: 768px) {
+  .table-container {
+    margin: 0.5rem;
+    padding: 1rem;
+  }
+  .table {
+    font-size: 0.9rem;
+  }
+
+  .table button {
+    margin-bottom: 0.3rem;
+  }
+
+  .table thead,
+  .table td {
+    padding: 0.5rem;
+  }
+}
