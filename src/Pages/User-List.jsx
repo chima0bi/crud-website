@@ -28,12 +28,10 @@ const UserList = () => {
       try {
         setLoading(true);
         const res = await axios.get(api);
-        console.log(res);
+        console.log("Response", res);
         setUsers(res.data);
         setLoading(false);
       } catch (err) {
-        // setError(error);
-        // setError(err);
         console.error(err);
         setLoading(false);
       }
@@ -62,40 +60,6 @@ const UserList = () => {
         style={{ alignSelf: "center", justifySelf: "center" }}
       />
     );
-
-  // 🔹 Fake static users data
-  // const [users] = useState([
-  //   {
-  //     _id: "1",
-  //     firstName: "John",
-  //     lastName: "Doe",
-  //     email: "john.doe@example.com",
-  //   },
-  //   {
-  //     _id: "2",
-  //     firstName: "Jane",
-  //     lastName: "Smith",
-  //     email: "jane.smith@example.com",
-  //   },
-  //   {
-  //     _id: "3",
-  //     firstName: "Michael",
-  //     lastName: "Johnson",
-  //     email: "michael.johnson@example.com",
-  //   },
-  //   {
-  //     _id: "4",
-  //     firstName: "Emily",
-  //     lastName: "Brown",
-  //     email: "emily.brown@example.com",
-  //   },
-  //   {
-  //     _id: "5",
-  //     firstName: "Daniel",
-  //     lastName: "Wilson",
-  //     email: "daniel.wilson@example.com",
-  //   },
-  // ]);
 
   return (
     <div>

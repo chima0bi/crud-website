@@ -6,7 +6,7 @@ import "./Table.css";
 const Table = () => {
   const [users, setUsers] = useState("");
   useEffect(() => {
-    fetch("http://localhost:7000/users")
+    fetch("http://localhost:8000/users")
       .then((res) => res.json())
       .then((data) => setUsers(data))
       .catch((err) => console.error(err.message));
@@ -15,7 +15,9 @@ const Table = () => {
     <div>
       <div className="table-container">
         <h2>Student Records</h2>
-        <Link to={'/createNew'} className="add-btn">Add New Student</Link>
+        <Link to={"/createNew"} className="add-btn">
+          Add New Student
+        </Link>
         <table className="table">
           <thead>
             <tr>
@@ -35,8 +37,12 @@ const Table = () => {
                   <td>{item.place}</td>
                   <td>{item.phone}</td>
                   <td>
-                    <Link to={'/userInfo/:userId'} className="view">View</Link>
-                    <Link to={'/editUser/:userInfo'} className="edit">Edit</Link>
+                    <Link to={`/viewUser/${item.id}`} className="view">
+                      View
+                    </Link>
+                    <Link to={`/editJsonUser/${item.id}`} className="edit">
+                      Edit
+                    </Link>
                     <Link className="delete">Delete</Link>
                   </td>
                 </tr>

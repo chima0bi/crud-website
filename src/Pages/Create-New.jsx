@@ -10,12 +10,14 @@ const CreateNew = () => {
   const [id, setId] = useState("");
   const [place, setPlace] = useState("");
   const [phone, setPhone] = useState("");
+  const [validation, setValidation] = useState(false);
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const userData = { id, name, place, phone };
     console.log(userData);
 
-    fetch("http://localhost:7000/users", {
+    fetch("http://localhost:8000/users", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -45,8 +47,9 @@ const CreateNew = () => {
             required
             value={id}
             onChange={(e) => setId(e.target.value)}
+            onMouseDown={() => setValidation(true)}
           />
-          {id.length === 0 && (
+          {id.length === 0 && validation && (
             <span className="inputError">please enter an ID</span>
           )}
           <label htmlFor="name">Name: </label>
@@ -57,8 +60,9 @@ const CreateNew = () => {
             required
             value={name}
             onChange={(e) => setName(e.target.value)}
+            onMouseDown={() => setValidation(true)}
           />
-          {name.length === 0 && (
+          {name.length === 0 && validation && (
             <span className="inputError">please enter your name</span>
           )}
           <label htmlFor="place">Place: </label>
@@ -69,8 +73,9 @@ const CreateNew = () => {
             required
             value={place}
             onChange={(e) => setPlace(e.target.value)}
+            onMouseDown={() => setValidation(true)}
           />
-          {place.length === 0 && (
+          {place.length === 0 && validation && (
             <span className="inputError">please enter your location</span>
           )}
           <label htmlFor="phone">Phone: </label>
@@ -82,13 +87,14 @@ const CreateNew = () => {
             required
             value={phone}
             onChange={(e) => setPhone(e.target.value)}
+            onMouseDown={() => setValidation(true)}
           />
-          {phone.length === 0 && (
+          {phone.length === 0 && validation && (
             <span className="inputError">please enter your phone number</span>
           )}
           <div className="form-buttons">
             <Button type="submit">Save</Button>
-            <Button onClick={() => navigate(-1)}>Cancel</Button>
+            <Link to={"/"}>Back</Link>
           </div>
         </form>
       </div>

@@ -63,7 +63,7 @@
   text-align: center;
 } */
 
-.form-buttons button {
+.form-buttons button, .form-buttons a {
   padding: 8px 30px;
   color: white;
   text-decoration: none;

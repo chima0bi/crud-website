@@ -8,6 +8,8 @@ import UserList from "./Pages/User-List";
 import EditUser from "./Pages/EditUser"
 import CreateNew from "./Pages/Create-New"
 import UserInfo from "./Pages/UserInfo"
+import ViewUser from "./Pages/ViewUser";
+import EditJsonUser from "./Pages/EditJsonuser";
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
           <Route path="/Register" element={<RegistrationScreen />} />
           <Route path="/UserList" element={<UserList />} />
           <Route path="/editUser/:userId" element={<EditUser />} />
+          <Route path="/viewUser/:userId" element={<ViewUser />} />
+          <Route path="/editJsonUser/:userId" element={<EditJsonUser />} />
           <Route path="/createNew" element={<CreateNew />} />
           <Route path="/userInfo/:userId" element={<UserInfo />} />
         </Routes>

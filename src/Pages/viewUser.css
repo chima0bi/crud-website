@@ -1,0 +1,23 @@
+.userData {
+  margin-top: 100px;
+  margin-left: 20px;
+  width: 80%;
+  align-self: center;
+  padding: 30px;
+  justify-self: center;
+  border: 1px solid;
+  border-radius: 3dvh;
+  box-shadow: 1 1 2px black;
+}
+
+.back-btn {
+  padding: 10px;
+  background: red;
+  display: block;
+  text-align: center;
+  margin: 5px;
+  border-radius: 2dvh;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
