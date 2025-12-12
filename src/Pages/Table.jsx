@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Table.css";
+import axios from "axios";
 // import { useNavigate } from "react-router-dom";
 
 const Table = () => {
@@ -8,9 +9,24 @@ const Table = () => {
   useEffect(() => {
     fetch("http://localhost:8000/users")
       .then((res) => res.json())
-      .then((data) => setUsers(data))
+      .then((data) => {
+        setUsers(data);
+        console.log("frg", data);
+      })
       .catch((err) => console.error(err.message));
   }, []);
+  const RemoveUser = async (id) => {
+    if (window.confirm("Really going to delete this user?")) {
+      try {
+        const res = await axios.delete(`http://localhost:8000/users/${id}`);
+        window.location.reload();
+      } catch (error) {
+        console.error(error.message);
+        window.alert("Error deleting user");
+      }
+    }
+    return;
+  };
   return (
     <div>
       <div className="table-container">
@@ -30,9 +46,9 @@ const Table = () => {
           </thead>
           <tbody>
             {users &&
-              users.map((item) => (
+              users.map((item, index) => (
                 <tr key={item.id}>
-                  <td>{item.id}</td>
+                  <td>{index + 1}</td>
                   <td>{item.name}</td>
                   <td>{item.place}</td>
                   <td>{item.phone}</td>
@@ -43,7 +59,14 @@ const Table = () => {
                     <Link to={`/editJsonUser/${item.id}`} className="edit">
                       Edit
                     </Link>
-                    <Link className="delete">Delete</Link>
+                    <button
+                      onClick={() => {
+                        RemoveUser(item.id);
+                      }}
+                      className="delete"
+                    >
+                      Delete
+                    </button>
                   </td>
                 </tr>
               ))}

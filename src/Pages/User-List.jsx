@@ -39,18 +39,18 @@ const UserList = () => {
     fetchUsers();
   }, [api]);
 
-  const deleteUser = async (_id) => {
-    const confirm = window.confirm(
-      "Are you sure you want to delete this user? "
-    );
-    if (!confirm) return;
-    try {
-      await axios.delete(
-        `${import.meta.env.VITE_BASE_URL}/${_id}`
-      );
-    } catch (error) {
-      console.error(error);
-      alert("Failed to delete User");
+  const deleteUser = async (id) => {
+    if (window.confirm("Are you sure you want to delete this user? ")) {
+      // if (!confirm) return;
+      try {
+        const res = await axios.delete(
+          `${import.meta.env.VITE_BASE_URL}/delete/${id}`
+        );
+        window.location.reload();
+      } catch (error) {
+        console.error(error);
+        alert("Failed to delete User");
+      }
     }
   };
 
@@ -73,7 +73,7 @@ const UserList = () => {
             <TableHead>
               <TableRow>
                 <TableCell>
-                  <b>ID</b>
+                  <b>S/N</b>
                 </TableCell>
                 <TableCell>
                   <b>Name</b>
@@ -89,9 +89,9 @@ const UserList = () => {
 
             <TableBody>
               {users.length > 0 ? (
-                users.map((user) => (
+                users.map((user, index) => (
                   <TableRow key={user._id}>
-                    <TableCell>{user._id}</TableCell>
+                    <TableCell>{index+1}</TableCell>
                     <TableCell>
                       {user.firstName} {user.lastName}
                     </TableCell>

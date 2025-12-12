@@ -15,7 +15,7 @@ const ViewUser = () => {
       .catch((err) => {
         console.error(err.message);
       });
-  }, []);
+  }, [userId]);
 
   return (
     <>

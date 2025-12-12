@@ -5,7 +5,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 
 const UserInfo = () => {
-  const { userId } = useParams()
+  const { userId } = useParams().userId
   const [user, setUser] = useState(null)
   const [loading, setLoading] = useState(true)
   let [error, setError] = useState('')

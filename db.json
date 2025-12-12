@@ -1,46 +1,22 @@
 {
   "users": [
     {
-      "id": "1",
-      "name": "Chims",
-      "place": "Japan",
-      "phone": "07047966730"
-    },
-    {
       "id": "2",
-      "name": "Tony",
-      "place": "Seychelles",
-      "phone": "08169014997"
+      "name": "Fav",
+      "place": "Benue",
+      "phone": "+5600978987"
     },
     {
       "id": "3",
       "name": "Diogor",
-      "place": "Maldives",
+      "place": "Maldives at y",
       "phone": "08063722208"
     },
     {
-      "id": "10",
-      "name": "Constantine",
-      "place": "Madrid",
-      "phone": "08102340899"
-    },
-    {
       "id": "-2",
-      "name": "tyuuijh",
-      "place": "ghtgh",
-      "phone": "756uy"
-    },
-    {
-      "id": "98",
-      "name": "liuiikl",
-      "place": "oug",
-      "phone": "jjhjk"
-    },
-    {
-      "id": "66",
-      "name": "ljgh",
-      "place": "rtryuhj",
-      "phone": "y6rtfyg"
+      "name": "David",
+      "place": "Daniel",
+      "phone": "734234354"
     }
   ]
 }

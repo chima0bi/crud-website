@@ -9,7 +9,7 @@ import EditUser from "./Pages/EditUser"
 import CreateNew from "./Pages/Create-New"
 import UserInfo from "./Pages/UserInfo"
 import ViewUser from "./Pages/ViewUser";
-import EditJsonUser from "./Pages/EditJsonuser";
+import EditJsonUser from "./Pages/EditJsonUser";
 
 function App() {
   return (

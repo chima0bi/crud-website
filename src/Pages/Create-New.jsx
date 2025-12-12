@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./CreateNew.css";
-import { Button } from "@mui/material";
+// import { Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 
 const CreateNew = () => {
@@ -93,7 +93,7 @@ const CreateNew = () => {
             <span className="inputError">please enter your phone number</span>
           )}
           <div className="form-buttons">
-            <Button type="submit">Save</Button>
+            <button type="submit">Save</button>
             <Link to={"/"}>Back</Link>
           </div>
         </form>
